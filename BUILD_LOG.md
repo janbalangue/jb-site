@@ -1,0 +1,55 @@
+# Build Log
+
+This document captures the evolution of jb-site as it was built and refined.
+Rather than tracking releases or versions, it records what was built, adjusted, and fixed during active development.
+
+## January 20, 2026 — Initial Build
+
+### Foundation
+
+* Bootstrapped a Spring Boot 4 application using Thymeleaf for server-side rendering
+* Established a shared layout template for header, footer, scripts, and global styles
+* Set up static asset handling for CSS, JavaScript, and images
+* Defined a dark-mode–first design system using CSS variables
+
+### Home Page & Layout
+
+* Built the hero section with a responsive two-column grid
+* Added a header image and resolved static image rendering issues
+* Tuned spacing and layout to keep the hero visually calm and readable
+* Implemented responsive breakpoints for mobile and tablet layouts
+
+### Interactivity
+
+* Introduced HTMX to progressively enhance the site without heavy JavaScript
+* Built the Explore section using HTMX-powered tabs (Music, Writing, Open Source)
+* Added client-side tab state handling for visual feedback
+* Implemented smooth scrolling for in-page navigation
+
+### Content Areas
+
+* Music section with SoundCloud and YouTube links plus embedded SoundCloud player
+* Writing section highlighting Substack blogs and cross-posts
+* Open Source section featuring the Async Bulkhead library (published to Maven Central)
+* “Get in touch” section with location, email, and phone details
+
+### UI Polish
+
+* Added pill-style stat cards for highlights (Substack, YouTube, Open Source)
+* Introduced card-based layouts for content sections
+* Ensured consistent typography, contrast, and spacing across the site
+* Added a floating “scroll to top” button with visibility and animation logic
+
+### Fixes & Adjustments
+
+* Resolved CSS not loading due to Spring Boot static resource path issues
+* Fixed header image placeholders rendering without the actual image
+* Diagnosed and corrected HTMX behavior where only the first tab rendered
+* Cleaned up Thymeleaf fragment usage that caused layout inconsistencies
+* Adjusted scroll behavior to avoid abrupt jumps
+
+### Notes
+
+* This log reflects one focused build session with heavy iteration
+* Many changes were incremental and driven by visual inspection and behavior testing
+* Future entries will be added only when meaningful structural or content changes occur

@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" th:fragment="layout(content)"
+      xmlns:th="http://www.thymeleaf.org">
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title th:text="${title} ?: 'Jay — Music & Software'">Jay — Music & Software</title>
+
+    <link href="/styles.css" rel="stylesheet"/>
+    <script defer src="/jay.js"></script>
+    <script defer src="https://unpkg.com/htmx.org@1.9.12"></script>
 </head>
+
 <body>
-$END$
+<header class="header">
+</header>
+
+<main class="container" id="top">
+    <th:block th:replace="${content}"/>
+</main>
+
+<footer class="container footer"></footer>
+<button aria-label="Scroll to top" class="scrollTopBtn" id="scrollTopBtn">
+    ↑
+</button>
 </body>
 </html>
