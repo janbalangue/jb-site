@@ -4,6 +4,12 @@ Personal website built with Spring Boot + Thymeleaf, designed as a clean, fast, 
 
 This site powers my landing page, project highlights, and contact info, with lightweight interactivity via HTMX and zero frontend frameworks.
 
+## 🌐 Live Demo
+
+🚀 **https://jb-site.fly.dev/**
+
+Deployed on Fly.io using Docker. Server-rendered with Spring Boot 4 + Thymeleaf.
+
 ## ✨ Features
 
 * Spring Boot 4 + Thymeleaf server-rendered pages
