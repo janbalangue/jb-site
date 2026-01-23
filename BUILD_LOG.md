@@ -56,7 +56,7 @@ Rather than tracking releases or versions, it records what was built, adjusted, 
 
 ---
 
-## January 21, 2026 — Content & Media Enhancements
+## January 23, 2026 — Content & Media Enhancements
 
 ### Accomplishments & Content Updates
 
@@ -81,3 +81,13 @@ Rather than tracking releases or versions, it records what was built, adjusted, 
 * This push focuses on content maturity and presentation rather than new architecture
 * Media embeds are now first-class elements instead of external links
 * Sets a stable baseline before further iteration on discoverability or navigation
+
+---
+
+## January 23, 2026
+
+* Refined panel hover interactions across the site for a subtler, calmer feel
+* Reduced hover lift, glow, and animation intensity to improve visual restraint
+* Slowed hover transitions for smoother, more intentional motion
+* Disabled hover effects on the Get in Touch section to keep the contact area grounded and static
+* Verified static asset loading and cache-busting during local development
