@@ -91,3 +91,9 @@ Rather than tracking releases or versions, it records what was built, adjusted, 
 * Slowed hover transitions for smoother, more intentional motion
 * Disabled hover effects on the Get in Touch section to keep the contact area grounded and static
 * Verified static asset loading and cache-busting during local development
+
+---
+
+## January 23, 2026
+
+* Separated async-bulkhead and async-bulkhead-ts into distinct miniCards and added margin-bottom: 16px to improve spacing and readability
