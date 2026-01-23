@@ -22,9 +22,10 @@ public class PageController {
         model.addAttribute("stats", Map.of(
                 "substackSubscribers", 250,
                 "substackSince", "Oct 2025",
-                "youtubeSubscribers", 530,
+                "youtubeSubscribers", 640,
                 "youtubeSince", "Dec 2025",
-                "bulkheadVersion", "v0.3.1"
+                "bulkheadVersion", "v0.3.2",
+                "tsBulkheadVersion", "v0.1.0"
         ));
 
 

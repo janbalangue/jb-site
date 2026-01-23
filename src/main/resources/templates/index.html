@@ -12,7 +12,7 @@
             <div>
                 <h1>Hi, I’m Jay — I write, build software, and share music.</h1>
                 <p class="lead">
-                    Popular <strong>SoundCloud pianist</strong>, writer of <strong>two Substack blogs</strong>,
+                    Popular <strong>SoundCloud pianist</strong>, writer on <strong>Substack</strong> and <strong>Medium</strong>,
                     and a software engineer shipping reliable systems and open-source libraries.
                 </p>
 
@@ -33,7 +33,7 @@
                     <div class="pill">
                         <div class="pillKicker">YouTube Music</div>
                         <div class="pillValue">
-                            <span th:text="${stats.youtubeSubscribers}">530</span> subscribers
+                            <span th:text="${stats.youtubeSubscribers}">640</span> subscribers
                         </div>
                         <div class="pillMeta">Since <span th:text="${stats.youtubeSince}">Dec 2025</span></div>
                     </div>
@@ -42,7 +42,14 @@
                         <div class="pillKicker">Open Source</div>
                         <div class="pillValue">Async Bulkhead</div>
                         <div class="pillMeta">
-                            Maven Central • <span th:text="${stats.bulkheadVersion}">v0.3.1</span>
+                            Maven Central • <span th:text="${stats.bulkheadVersion}">v0.3.2</span>
+                        </div>
+                    </div>
+                    <div class="pill">
+                        <div class="pillKicker">Open Source</div>
+                        <div class="pillValue">Async Bulkhead TS</div>
+                        <div class="pillMeta">
+                            npm • <span th:text="${stats.tsBulkheadVersion}">v0.1.0</span>
                         </div>
                     </div>
                 </div>
@@ -61,16 +68,15 @@
                     </li>
                     <li><a href="https://jaybalangue.substack.com/" rel="noopener">Faux Pas Pro</a><span class="muted"> Substack Blog</span>
                     </li>
-                    <li><a href="https://javaasyncmessages.substack.com/" rel="noopener">Java Async Messages</a><span
-                            class="muted"> Substack Blog</span></li>
                     <li><a href="https://www.patreon.com/cw/JayBalangue" rel="noopener">Patreon</a><span class="muted"> Support & extras</span>
                     </li>
-                    <li><a href="https://medium.com/@javaasyncmessages" rel="noopener">Java Async Messages on Medium</a><span class="muted"> Blog</span>
+                    <li><a href="https://medium.com/@javaasyncmessages" rel="noopener">Medium</a><span class="muted"> Blog</span>
                     </li>
                     <li><a href="https://github.com/janbalangue" rel="noopener">GitHub</a><span
                             class="muted"> Code</span></li>
                   <li><a href="https://central.sonatype.com/artifact/io.github.janbalangue/async-bulkhead" rel="noopener">Maven Central</a><span
                           class="muted"> async-bulkhead library</span></li>
+                    <li><a href="https://www.npmjs.com/package/async-bulkhead-ts" rel="noopener">npm</a><span class="muted"> async-bulkhead-ts library</span></li>
                 </ul>
             </aside>
         </div>
@@ -81,18 +87,17 @@
         <div class="cards">
             <div class="card">
                 <h3>Music</h3>
-                <p class="muted">Piano performances and arrangements, focused on consistency and storytelling.</p>
+                <p class="muted">Piano performances and arrangements, focused on emotion and eclecticism.</p>
                 <ul class="bullets">
-                    <li>SoundCloud releases and playlists</li>
-                    <li>YouTube performance videos</li>
-                    <li>Patreon perks (scores, behind-the-scenes)</li>
+                    <li>SoundCloud releases</li>
+                    <li>YouTube music videos</li>
+                    <li>Patreon perks (exclusive videos)</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>Writing</h3>
-                <p class="muted">Two Substack blogs: notes on building, learning, and making creative work
-                    sustainable.</p>
+                <p class="muted">Faux Pas Pro on Substack: piano, technical perspective, armchair philosophy, and personal reflections.</p>
                 <ul class="bullets">
                     <li>250 subscribers since Oct 2025</li>
                     <li>Cross-posting to Medium</li>

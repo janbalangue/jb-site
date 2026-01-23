@@ -53,3 +53,32 @@ Rather than tracking releases or versions, it records what was built, adjusted, 
 * This log reflects one focused build session with heavy iteration
 * Many changes were incremental and driven by visual inspection and behavior testing
 * Future entries will be added only when meaningful structural or content changes occur
+
+---
+
+## January 21, 2026 — Content & Media Enhancements
+
+### Accomplishments & Content Updates
+
+* Updated `index.html` and all Explore fragments with new accomplishments and current stats
+* Refreshed copy to better reflect recent progress across music, writing, and open source work
+* Ensured consistency between homepage highlights and fragment content
+
+### Media Embeds
+
+* Added YouTube video embed to the Music section for native playback
+* Resized the SoundCloud embed to a slimmer, calmer footprint
+* Tuned spacing so audio and video embeds feel intentional and unobtrusive
+* Preserved responsive behavior across desktop and mobile
+
+### UI / UX Polish
+
+* Maintained visual balance between embeds, cards, and text
+* Kept embeds aligned with the site’s dark-mode–first design language
+* Avoided layout shift when loading HTMX fragments
+
+### Notes
+
+* This push focuses on content maturity and presentation rather than new architecture
+* Media embeds are now first-class elements instead of external links
+* Sets a stable baseline before further iteration on discoverability or navigation
