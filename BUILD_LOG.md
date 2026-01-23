@@ -67,7 +67,6 @@ Rather than tracking releases or versions, it records what was built, adjusted, 
 ### Media Embeds
 
 * Added YouTube video embed to the Music section for native playback
-* Resized the SoundCloud embed to a slimmer, calmer footprint
 * Tuned spacing so audio and video embeds feel intentional and unobtrusive
 * Preserved responsive behavior across desktop and mobile
 

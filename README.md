@@ -18,7 +18,7 @@ Deployed on Fly.io using Docker. Server-rendered with Spring Boot 4 + Thymeleaf.
 * Responsive hero layout with image header
 * Scroll-to-top button with smooth scrolling
 * Modular fragment-based layout for easy iteration
-* YouTube embed + resized SoundCloud player
+* YouTube embed + SoundCloud player
 
 ## 🧱 Tech Stack
 
