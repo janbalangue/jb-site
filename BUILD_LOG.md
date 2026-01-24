@@ -97,3 +97,12 @@ Rather than tracking releases or versions, it records what was built, adjusted, 
 ## January 23, 2026
 
 * Separated async-bulkhead and async-bulkhead-ts into distinct miniCards and added margin-bottom: 16px to improve spacing and readability
+
+---
+
+## 2026-01-23
+
+Fix missing scroll-to-top button
+* Resolved issue where the scroll-to-top button was not visible due to the global hover system overriding its position: fixed and z-index.
+* Removed .scrollTopBtn from the global hover selector group to prevent layout clobbering.
+* Reasserted fixed positioning and layering for the scroll button and applied a subtle, scoped hover effect consistent with the site’s interaction style.
