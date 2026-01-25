@@ -106,3 +106,12 @@ Fix missing scroll-to-top button
 * Resolved issue where the scroll-to-top button was not visible due to the global hover system overriding its position: fixed and z-index.
 * Removed .scrollTopBtn from the global hover selector group to prevent layout clobbering.
 * Reasserted fixed positioning and layering for the scroll button and applied a subtle, scoped hover effect consistent with the site’s interaction style.
+
+---
+
+## 2026-01-25
+
+* Removed inline Maven dependency snippet from the Open Source tab
+* Simplified async-bulkhead presentation to focus on project intent and links rather than install instructions
+* Reduced visual noise in the OSS panel to keep the section concise and scannable
+* Preserved direct links to GitHub and Maven Central for users who want implementation details
