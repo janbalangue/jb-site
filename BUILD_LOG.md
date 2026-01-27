@@ -115,3 +115,9 @@ Fix missing scroll-to-top button
 * Simplified async-bulkhead presentation to focus on project intent and links rather than install instructions
 * Reduced visual noise in the OSS panel to keep the section concise and scannable
 * Preserved direct links to GitHub and Maven Central for users who want implementation details
+
+---
+
+## 2026-01-26
+
+* Updated Fly.io setting `min_machines_running` to `1` to eliminate cold starts
