@@ -3,7 +3,7 @@
 This document captures the evolution of jb-site as it was built and refined.
 Rather than tracking releases or versions, it records what was built, adjusted, and fixed during active development.
 
-## January 20, 2026 — Initial Build
+## 2026-01-20 — Initial Build
 
 ### Foundation
 
@@ -56,7 +56,7 @@ Rather than tracking releases or versions, it records what was built, adjusted, 
 
 ---
 
-## January 23, 2026 — Content & Media Enhancements
+## 2026-01-23
 
 ### Accomplishments & Content Updates
 
@@ -84,7 +84,7 @@ Rather than tracking releases or versions, it records what was built, adjusted, 
 
 ---
 
-## January 23, 2026
+## 2026-01-23
 
 * Refined panel hover interactions across the site for a subtler, calmer feel
 * Reduced hover lift, glow, and animation intensity to improve visual restraint
@@ -94,7 +94,7 @@ Rather than tracking releases or versions, it records what was built, adjusted, 
 
 ---
 
-## January 23, 2026
+## 2026-01-23
 
 * Separated async-bulkhead and async-bulkhead-ts into distinct miniCards and added margin-bottom: 16px to improve spacing and readability
 
@@ -121,3 +121,11 @@ Fix missing scroll-to-top button
 ## 2026-01-26
 
 * Updated Fly.io setting `min_machines_running` to `1` to eliminate cold starts
+
+---
+
+## 2026-01-27
+
+* Updated embedded SoundCloud track and added a YouTube video embed in the Music section
+* Refreshed Music, Writing, and Open Source fragments with current accomplishments
+* Aligned fragment content with homepage highlights and verified stable HTMX loading

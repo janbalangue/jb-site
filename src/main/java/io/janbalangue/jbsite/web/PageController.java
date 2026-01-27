@@ -20,12 +20,12 @@ public class PageController {
 
 // You can later replace these with values from application.yml or a JSON file.
         model.addAttribute("stats", Map.of(
-                "substackSubscribers", 250,
+                "substackSubscribers", 280,
                 "substackSince", "Oct 2025",
-                "youtubeSubscribers", 640,
+                "youtubeSubscribers", 1190,
                 "youtubeSince", "Dec 2025",
-                "bulkheadVersion", "v0.3.2",
-                "tsBulkheadVersion", "v0.1.0"
+                "bulkheadVersion", "v0.4.0",
+                "tsBulkheadVersion", "v0.2.0"
         ));
 
 
