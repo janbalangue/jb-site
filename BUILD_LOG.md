@@ -129,3 +129,9 @@ Fix missing scroll-to-top button
 * Updated embedded SoundCloud track and added a YouTube video embed in the Music section
 * Refreshed Music, Writing, and Open Source fragments with current accomplishments
 * Aligned fragment content with homepage highlights and verified stable HTMX loading
+
+---
+
+## 2026-01-27
+
+* Removed Medium listing as this project will be discontinued for now.
