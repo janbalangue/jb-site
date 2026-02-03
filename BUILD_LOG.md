@@ -135,3 +135,25 @@ Fix missing scroll-to-top button
 ## 2026-01-27
 
 * Removed Medium listing as this project will be discontinued for now.
+
+---
+
+## 2026-02-03
+
+### Accomplishments
+
+* Updated accomplishment metrics and milestones to reflect current impact and activity.
+* Refined language around open-source and technical work to better represent scope, maturity, and outcomes.
+* Adjusted counts / highlights to align with latest public stats and platforms.
+
+## Descriptions & copy
+
+* Rewrote section descriptions for clarity and tone, focusing on what I actually do and why it matters.
+* Tightened phrasing to reduce fluff and improve scannability while retaining my authentic voice.
+* Clarified distinctions between areas of work (engineering, writing, music, etc.) through more precise wording.
+* Made small consistency passes so terminology and framing match across sections.
+
+## Notes
+
+* No structural, layout, styling, JavaScript, or architectural changes in this update.
+* This was a content-only pass focused on accuracy, clarity, and presentation of achievements.

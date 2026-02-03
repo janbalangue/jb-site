@@ -8,7 +8,7 @@ This site powers my landing page, project highlights, and contact info, with lig
 
 🚀 **https://jb-site.fly.dev/**
 
-Deployed on Fly.io using Docker. Server-rendered with Spring Boot 4 + Thymeleaf.
+Deployed on Fly.io using Docker. Server-rendered with Spring Boot 4.x + Thymeleaf.
 
 ## ✨ Features
 
@@ -111,17 +111,15 @@ This keeps global styles, scripts, and navigation consistent.
 * Server-side rendering first
 * Progressive enhancement instead of heavy JS
 
-** 📬 Contact
+## 📬 Contact information
 
-Jay Balangue
-1924 Millenia Ave #205
-Chula Vista, CA 91915
+> 🏠 Chula Vista, CA
 
 > 📧 jan.a.balangue@gmail.com
 
 > 📞 (858) 775-5831
 
-** 📄 License
+## 📄 License
 
 Personal project.
 All rights reserved unless otherwise stated.

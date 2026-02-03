@@ -10,10 +10,9 @@
         </div>
         <div class="heroGrid">
             <div>
-                <h1>Hi, I’m Jay — I write, build software, and share music.</h1>
+                <h1>Hi, I’m Jay — a writer, software developer, and music & video creator.</h1>
                 <p class="lead">
-                    Popular <strong>SoundCloud pianist</strong>, writer on <strong>Substack</strong> and <strong>Medium</strong>,
-                    and a software engineer shipping reliable systems and open-source libraries.
+                    Popular <strong>SoundCloud pianist</strong> and <strong>YouTuber</strong>, <strong>Substack</strong> writer, and <strong>software engineer</strong> building reliable systems and open-source libraries.
                 </p>
 
                 <div class="ctaRow">
@@ -25,7 +24,7 @@
                     <div class="pill">
                         <div class="pillKicker">Substack</div>
                         <div class="pillValue">
-                            <span th:text="${stats.substackSubscribers}">280</span> subscribers
+                            <span th:text="${stats.substackSubscribers}">290</span> subscribers
                         </div>
                         <div class="pillMeta">Since <span th:text="${stats.substackSince}">Oct 2025</span></div>
                     </div>
@@ -33,7 +32,7 @@
                     <div class="pill">
                         <div class="pillKicker">YouTube Music</div>
                         <div class="pillValue">
-                            <span th:text="${stats.youtubeSubscribers}">1100</span> subscribers
+                            <span th:text="${stats.youtubeSubscribers}">2.7K</span> subscribers
                         </div>
                         <div class="pillMeta">Since <span th:text="${stats.youtubeSince}">Dec 2025</span></div>
                     </div>
@@ -42,14 +41,14 @@
                         <div class="pillKicker">Open Source</div>
                         <div class="pillValue">Async Bulkhead</div>
                         <div class="pillMeta">
-                            Maven Central • <span th:text="${stats.bulkheadVersion}">v0.3.2</span>
+                            Maven Central • <span th:text="${stats.bulkheadVersion}">v0.5.2</span>
                         </div>
                     </div>
                     <div class="pill">
                         <div class="pillKicker">Open Source</div>
                         <div class="pillValue">Async Bulkhead TS</div>
                         <div class="pillMeta">
-                            npm • <span th:text="${stats.tsBulkheadVersion}">v0.1.0</span>
+                            npm • <span th:text="${stats.tsBulkheadVersion}">v0.2.1</span>
                         </div>
                     </div>
                 </div>
@@ -62,11 +61,12 @@
                     <li><a href="https://www.hackerrank.com/profile/jan_a_balangue" rel="noopener">HackerRank</a><span class="muted"> Profile</span></li>
                     <li><a href="https://soundcloud.com/jaybalangue" rel="noopener">SoundCloud</a><span class="muted"> Piano performances</span></li>
                     <li><a href="https://www.youtube.com/@jaybalangue" rel="noopener">YouTube</a><span class="muted"> Music channel</span></li>
-                    <li><a href="https://jaybalangue.substack.com/" rel="noopener">Faux Pas Pro</a><span class="muted"> Substack Blog</span></li>
-                    <li><a href="https://www.patreon.com/cw/JayBalangue" rel="noopener">Patreon</a><span class="muted"> Support & extras</span></li>
+                    <li><a href="https://jaybalangue.substack.com/" rel="noopener">Substack</a><span class="muted"> Blog</span></li>
                     <li><a href="https://github.com/janbalangue" rel="noopener">GitHub</a><span class="muted"> Code</span></li>
                     <li><a href="https://central.sonatype.com/artifact/io.github.janbalangue/async-bulkhead" rel="noopener">Maven Central</a><span class="muted"> async-bulkhead library</span></li>
                     <li><a href="https://www.npmjs.com/package/async-bulkhead-ts" rel="noopener">npm</a><span class="muted"> async-bulkhead-ts library</span></li>
+                    <li><a href="https://www.patreon.com/cw/JayBalangue" rel="noopener">Patreon</a><span class="muted"> Support & extras</span></li>
+                    <li><a href="https://buymeacoffee.com/fauxpaspro" rel="noopener">Buy me a coffee</a><span class="muted"> Support</span></li>
                 </ul>
             </aside>
         </div>
@@ -77,31 +77,31 @@
         <div class="cards">
             <div class="card">
                 <h3>Music</h3>
-                <p class="muted">Piano performances and arrangements, focused on emotion and eclecticism.</p>
+                <p class="muted">Piano cover performances, focused on eclecticism and reinvention.</p>
                 <ul class="bullets">
                     <li>SoundCloud releases</li>
                     <li>YouTube music videos</li>
-                    <li>Patreon perks (exclusive videos)</li>
+                    <li>Patreon perks (video exclusives, pristine music downloads)</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>Writing</h3>
-                <p class="muted">Faux Pas Pro on Substack: piano, technical perspective, armchair philosophy, and personal reflections.</p>
+                <p class="muted">Faux Pas Pro on Substack: piano, technical perspective, ideas, and personal reflections.</p>
                 <ul class="bullets">
-                    <li>250 subscribers since Oct 2025</li>
-                    <li>Cross-posting to Medium</li>
+                    <li>290 subscribers since Oct 2025</li>
+                    <li>1.33K followers</li>
                     <li>Longform + short updates</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>Software</h3>
-                <p class="muted">Practical engineering: APIs, reliability, performance, and developer tools.</p>
+                <p class="muted">Cost-effective engineering to make asynchronous, concurrent systems more resilient.</p>
                 <ul class="bullets">
-                    <li>Async Bulkhead library on Maven Central</li>
-                    <li>Java / Spring / distributed systems</li>
-                    <li>Docs and examples-first approach</li>
+                    <li>async-bulkhead-parent library on Maven Central</li>
+                    <li>async-bulkhead-ts library on npm</li>
+                    <li>Docs and semantics-first approach</li>
                 </ul>
             </div>
         </div>
