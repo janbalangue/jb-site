@@ -146,14 +146,30 @@ Fix missing scroll-to-top button
 * Refined language around open-source and technical work to better represent scope, maturity, and outcomes.
 * Adjusted counts / highlights to align with latest public stats and platforms.
 
-## Descriptions & copy
+### Descriptions & copy
 
 * Rewrote section descriptions for clarity and tone, focusing on what I actually do and why it matters.
 * Tightened phrasing to reduce fluff and improve scannability while retaining my authentic voice.
 * Clarified distinctions between areas of work (engineering, writing, music, etc.) through more precise wording.
 * Made small consistency passes so terminology and framing match across sections.
 
-## Notes
+### Notes
 
 * No structural, layout, styling, JavaScript, or architectural changes in this update.
 * This was a content-only pass focused on accuracy, clarity, and presentation of achievements.
+
+---
+
+## 2026-02-03
+
+### Music Highlights
+
+* Added a SoundCloud pill to the homepage highlights row
+* Surfaced SoundCloud presence alongside Substack, YouTube Music, and Open Source
+* Kept the pill consistent with existing stat styling and dark-mode visual balance
+* Reinforced music as a first-class pillar of the site at a glance
+
+### Notes
+
+* This change improves immediate discoverability of music work without adding visual noise
+* Pills continue to function as lightweight, high-signal credibility markers rather than navigation

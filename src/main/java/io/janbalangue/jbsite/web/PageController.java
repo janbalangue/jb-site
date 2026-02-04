@@ -20,6 +20,7 @@ public class PageController {
 
 // You can later replace these with values from application.yml or a JSON file.
         model.addAttribute("stats", Map.of(
+                "soundcloudFollowers", "1.2K",
                 "substackSubscribers", 290,
                 "substackSince", "Oct 2025",
                 "youtubeSubscribers", "2.7K",
