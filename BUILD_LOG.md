@@ -195,3 +195,26 @@ Fix missing scroll-to-top button
 * This change is intentionally low-visibility but improves perceived performance and polish
 * Quick Links now better reflect current priorities: published work over tip jars
 * Sets up cleaner long-term caching strategy ahead of further Cloudflare tuning
+
+---
+
+## 2026-02-06
+
+### Content Refinement & Copy Polish
+
+* Refined copy across Music, Writing, and Software cards to improve clarity, tone, and consistency
+* Reworded Music descriptions to better emphasize reinterpretation, eclecticism, and performance focus
+* Updated Writing copy to clearly reference Substack while keeping the language concise and reflective
+* Tightened Software card language to better convey resilience and asynchronous systems without buzzwords
+
+### MiniCard Updates
+
+* Rephrased SoundCloud, YouTube, and Patreon miniCards for clearer scannability and parallel structure
+* Emphasized solo piano, performance-focused video content, and high-quality music downloads
+* Preserved existing layout and hierarchy while improving readability
+
+### Notes
+
+* No structural or styling changes — content-only pass
+* Focused on reducing repetition and sharpening intent across cards
+* Improves first-read comprehension without changing page flow

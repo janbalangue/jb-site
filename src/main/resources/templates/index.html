@@ -32,7 +32,9 @@
                     <div class="pill">
                         <div class="pillKicker">Substack</div>
                         <div class="pillValue">
-                            <span th:text="${stats.substackSubscribers}">290</span> subscribers
+                            <span th:text="${stats.substackSubscribers}">300</span> subscribers
+                            <span th:text="${stats.substackFollowers}">1.3K</span> followers
+
                         </div>
                         <div class="pillMeta">Since <span th:text="${stats.substackSince}">Oct 2025</span></div>
                     </div>
@@ -40,7 +42,7 @@
                     <div class="pill">
                         <div class="pillKicker">YouTube Music</div>
                         <div class="pillValue">
-                            <span th:text="${stats.youtubeSubscribers}">2.7K</span> subscribers
+                            <span th:text="${stats.youtubeSubscribers}">3.5K</span> subscribers
                         </div>
                         <div class="pillMeta">Since <span th:text="${stats.youtubeSince}">Dec 2025</span></div>
                     </div>
@@ -84,7 +86,7 @@
         <div class="cards">
             <div class="card">
                 <h3>Music</h3>
-                <p class="muted">Piano cover performances, focused on eclecticism and reinvention.</p>
+                <p class="muted">Piano covers shaped by eclectic taste and reinvention.</p>
                 <ul class="bullets">
                     <li>SoundCloud releases</li>
                     <li>YouTube music videos</li>
@@ -94,17 +96,17 @@
 
             <div class="card">
                 <h3>Writing</h3>
-                <p class="muted">Faux Pas Pro on Substack: piano, technical perspective, ideas, and personal reflections.</p>
+                <p class="muted">On Substack: piano, software perspectives, ideas, and personal reflections.</p>
                 <ul class="bullets">
-                    <li>290 subscribers since Oct 2025</li>
-                    <li>1.33K followers</li>
+                    <li>300 subscribers since Oct 2025</li>
+                    <li>1.3K followers</li>
                     <li>Longform + short updates</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>Software</h3>
-                <p class="muted">Cost-effective engineering to make asynchronous, concurrent systems more resilient.</p>
+                <p class="muted">Thoughtful, cost-conscious engineering for resilient asynchronous systems.</p>
                 <ul class="bullets">
                     <li>async-bulkhead-parent library on Maven Central</li>
                     <li>async-bulkhead-ts library on npm</li>
