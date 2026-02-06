@@ -173,3 +173,25 @@ Fix missing scroll-to-top button
 
 * This change improves immediate discoverability of music work without adding visual noise
 * Pills continue to function as lightweight, high-signal credibility markers rather than navigation
+
+---
+
+## 2026-02-06
+
+### Performance & Content Cleanup
+
+* Added explicit cache-control configuration to application.properties to improve static asset caching behavior in production
+* Tuned HTTP cache headers for CSS, JavaScript, and image assets to reduce repeat load times and unnecessary revalidation
+* Laid groundwork for CDN-friendly caching (Cloudflare / edge caching) without changing application code paths
+
+### Quick Links Refinement
+
+* Removed Buy Me a Coffee from the Quick Links section to reduce donation surface clutter
+* Updated the Maven Central link to point directly to the async-bulkhead artifact page instead of legacy or indirect references
+* Kept Quick Links focused on primary platforms (code, writing, music) rather than secondary support links
+
+### Notes
+
+* This change is intentionally low-visibility but improves perceived performance and polish
+* Quick Links now better reflect current priorities: published work over tip jars
+* Sets up cleaner long-term caching strategy ahead of further Cloudflare tuning
