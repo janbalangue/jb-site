@@ -70,13 +70,34 @@ jb-site/
 * Java 25+
 * Maven 3.9+
 
-Run the app
+Run the app:
 `mvn spring-boot:run`
 
 
 Then open:
 
 http://localhost:8080
+
+## Actuator Endpoints
+
+This application exposes minimal Spring Boot Actuator endpoints for production readiness.
+
+Base path:
+
+```txt
+/actuator
+```
+
+Exposed endpoints:
+
+```txt
+GET /actuator/health
+GET /actuator/health/liveness
+GET /actuator/health/readiness
+```
+
+Only the `health` endpoint is exposed over HTTP.
+Liveness and readiness probes are enabled for Fly.io deployment health checks.
 
 ## 🧩 Notable UI Patterns 
 
