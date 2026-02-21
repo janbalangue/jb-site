@@ -7,6 +7,7 @@ app = 'jb-site'
 primary_region = 'lax'
 
 [build]
+  dockerfile = "Dockerfile"
 
 [http_service]
   internal_port = 8080
@@ -30,6 +31,3 @@ primary_region = 'lax'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 512
-
-[env]
-JAVA_TOOL_OPTIONS = "-Dspring.aot.enabled=false"

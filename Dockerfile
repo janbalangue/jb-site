@@ -1,5 +1,5 @@
 # ---- Build stage (native) ----
-FROM ghcr.io/graalvm/native-image-community:21 AS build
+FROM ghcr.io/graalvm/native-image-community:25 AS build
 WORKDIR /app
 COPY pom.xml .
 COPY .mvn .mvn
