@@ -4,15 +4,15 @@ WORKDIR /app
 COPY pom.xml .
 COPY .mvn .mvn
 COPY mvnw mvnw
-RUN ./mvnw -q -DskipTests dependency:go-offline
+RUN ./mvnw -DskipTests dependency:go-offline
 COPY src ./src
-RUN ./mvnw -q -Pnative -DskipTests package
+RUN ./mvnw -Pnative -DskipTests package
 
 # ---- Run stage (native) ----
 FROM debian:bookworm-slim
 WORKDIR /app
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends zlib1g ca-certificates \
+  && apt-get install -y --no-install-recommends zlib1g ca-certificates curl \
   && rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /app/target/jb-site /app/jb-site

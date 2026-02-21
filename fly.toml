@@ -30,3 +30,6 @@ primary_region = 'lax'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 512
+
+[env]
+JAVA_TOOL_OPTIONS = "-Dspring.aot.enabled=false"
