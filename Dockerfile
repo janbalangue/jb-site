@@ -10,7 +10,7 @@ RUN ./mvnw -q -Pnative -DskipTests native:compile
 
 
 # ---- Run stage (native) ----
-FROM gcr.io/distroless/base-debian12:nonroot
+FROM gcr.io/distroless/cc-debian12:nonroot
 WORKDIR /app
 COPY --from=build /app/target/jb-site /app/jb-site
 EXPOSE 8080
