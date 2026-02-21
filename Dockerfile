@@ -10,9 +10,14 @@ RUN ./mvnw -q -Pnative -DskipTests native:compile
 
 
 # ---- Run stage (native) ----
-FROM gcr.io/distroless/cc-debian12:nonroot
+FROM debian:bookworm-slim
 WORKDIR /app
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends zlib1g ca-certificates \
+  && rm -rf /var/lib/apt/lists/*
+
 COPY --from=build /app/target/jb-site /app/jb-site
 EXPOSE 8080
-USER nonroot:nonroot
+RUN useradd -r -u 10001 appuser && chown -R appuser:appuser /app
+USER appuser
 ENTRYPOINT ["/app/jb-site"]
