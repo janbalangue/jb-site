@@ -54,7 +54,7 @@ public class ColdStartWarmup {
         Context ctx = new Context(Locale.US);
         ctx.setVariable("year", Year.now().getValue());
         ctx.setVariable("stats", STATS);
-        
+
         // process() parses/compiles and fills caches; output is discarded.
         templateEngine.process(viewName, ctx);
     }
