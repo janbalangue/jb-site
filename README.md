@@ -67,7 +67,7 @@ jb-site/
 
 ### Prerequisites
 
-* Java 17+
+* Java 25+
 * Maven 3.9+
 
 Run the app
@@ -114,7 +114,7 @@ This keeps global styles, scripts, and navigation consistent.
 
 * Minimal dependencies
 * Fast page loads
-* Readable, calm dark UI
+* Readable, calm, dark UI
 * Server-side rendering first
 * Progressive enhancement instead of heavy JS
 
