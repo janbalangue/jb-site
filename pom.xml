@@ -110,6 +110,7 @@
                             <execution>
                                 <id>process-aot</id>
                                 <phase>generate-sources</phase>
+                                <phase>process-classes</phase>
                                 <goals>
                                     <goal>process-aot</goal>
                                 </goals>
