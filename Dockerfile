@@ -1,13 +1,18 @@
-# ---- Build stage ----
-FROM maven:3.9-eclipse-temurin-21 AS build
+# ---- Build stage (native) ----
+FROM ghcr.io/graalvm/native-image-community:21 AS build
 WORKDIR /app
 COPY pom.xml .
+COPY .mvn .mvn
+COPY mvnw mvnw
+RUN ./mvnw -q -DskipTests dependency:go-offline
 COPY src ./src
-RUN mvn -DskipTests package
+RUN ./mvnw -q -Pnative -DskipTests native:compile
 
-# ---- Run stage ----
-FROM eclipse-temurin:21-jre
+
+# ---- Run stage (native) ----
+FROM gcr.io/distroless/base-debian12:nonroot
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/jb-site /app/jb-site
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+USER nonroot:nonroot
+ENTRYPOINT ["/app/jb-site"]

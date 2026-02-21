@@ -3,7 +3,6 @@ package io.janbalangue.jbsite.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.time.Year;
 import java.util.Map;
@@ -12,25 +11,21 @@ import java.util.Map;
 @Controller
 public class PageController {
 
+    private static final Map<String, Object> STATS = Map.of(
+            "soundcloudFollowers", "1.3K",
+            "substackSubscribers", 320,
+            "substackFollowers", "1.5K",
+            "substackSince", "Oct 2025",
+            "youtubeSubscribers", "4.8K",
+            "youtubeSince", "Dec 2025",
+            "bulkheadVersion", "v0.5.2",
+            "tsBulkheadVersion", "v0.2.2"
+    );
 
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("year", Year.now().getValue());
-
-
-// You can later replace these with values from application.yml or a JSON file.
-        model.addAttribute("stats", Map.of(
-                "soundcloudFollowers", "1.2K",
-                "substackSubscribers", 300,
-                "substackFollowers", "1.3K",
-                "substackSince", "Oct 2025",
-                "youtubeSubscribers", "3.5K",
-                "youtubeSince", "Dec 2025",
-                "bulkheadVersion", "v0.5.2",
-                "tsBulkheadVersion", "v0.2.1"
-        ));
-
-
+        model.addAttribute("stats", STATS);
         return "index";
     }
 
@@ -51,13 +46,5 @@ public class PageController {
     @GetMapping("/fragments/oss")
     public String oss() {
         return "fragments/oss";
-    }
-
-
-    // Optional: tiny health endpoint
-    @GetMapping("/health")
-    @ResponseBody
-    public String health() {
-        return "ok";
     }
 }
