@@ -4,21 +4,27 @@ Personal website built with Spring Boot + Thymeleaf, designed as a clean, fast, 
 
 This site powers my landing page, project highlights, and contact info, with lightweight interactivity via HTMX and zero frontend frameworks.
 
-## 🌐 Live Demo
+## 🌐 Live Site
 
-🚀 **https://jb-site.fly.dev/**
+🌎 **https://jb-site.dev**  
+(Primary domain via Cloudflare)
+
+🚀 https://jb-site.fly.dev  
+(Fly.io deployment URL)
 
 Deployed on Fly.io using Docker. Server-rendered with Spring Boot 4.x + Thymeleaf.
 
 ## ✨ Features
 
 * Spring Boot 4 + Thymeleaf server-rendered pages
+* GraalVM native image build for fast cold starts
 * Dark-mode–first UI with custom CSS (no frameworks)
 * HTMX-powered tabs for dynamic content loading
 * Responsive hero layout with image header
 * Scroll-to-top button with smooth scrolling
 * Modular fragment-based layout for easy iteration
 * YouTube embed + SoundCloud player
+* Actuator health checks for production readiness
 
 ## 🧱 Tech Stack
 
@@ -37,6 +43,7 @@ jb-site/
 │   │   ├── java/
 │   │   │   └── io/janbalangue/jbsite/
 │   │   │       └── PageController.java
+│   │   │       └── ColdStartWarmup.java
 │   │   └── resources/
 │   │       ├── static/
 │   │       │   ├── styles.css

@@ -218,3 +218,99 @@ Fix missing scroll-to-top button
 * No structural or styling changes — content-only pass
 * Focused on reducing repetition and sharpening intent across cards
 * Improves first-read comprehension without changing page flow
+
+---
+
+## 2026-02-21 — GraalVM native image + cold-start + Fly tuning
+
+### Summary
+Migrated the app to **GraalVM native image (Spring Boot 4 AOT)** to reduce cold-start latency and runtime memory. Updated Fly.io configuration and health checks for stable production deploys.
+
+### Build System (Maven)
+
+- Added `org.graalvm.buildtools:native-maven-plugin`
+- Added `native` profile:
+    - Enables Spring AOT (`spring.aot.enabled=true`)
+    - Runs `spring-boot:process-aot`
+    - Builds native executable named `jb-site`
+- Added `spring-boot-starter-actuator` for infra health checks
+
+Native build command:
+
+```bash
+mvn -Pnative -DskipTests native:compile
+```
+
+### Docker
+
+- Converted from JVM JAR image to **GraalVM native multi-stage build**
+- Runtime now executes compiled binary directly (no JVM)
+- Ensured Maven wrapper is committed for Docker builds
+
+Notes:
+- Use `fly deploy --remote-only` if building from Apple Silicon
+- Alternatively build with `--platform linux/amd64`
+
+### Cold Start Optimization
+
+- Added `ColdStartWarmup` component
+    - Pre-renders:
+        - `index`
+        - `fragments/music`
+        - `fragments/writing`
+        - `fragments/oss`
+    - Primes Thymeleaf parsing & expression caches
+    - Reduces first-request latency after scale-to-zero
+
+- Hoisted `stats` map in `PageController` to static constant to reduce per-request allocations
+
+- Enabled:
+
+```properties
+spring.thymeleaf.cache=true
+```
+
+### Health & Readiness
+
+- Exposed Actuator health endpoints:
+- `/actuator/health`
+- `/actuator/health/liveness`
+- `/actuator/health/readiness`
+- Fly health check now uses:
+
+```toml
+/actuator/health/readiness
+```
+- Increased health check grace period to 30s
+- Explicitly bound server:
+
+```properties
+server.address=0.0.0.0
+server.port=8080
+```
+
+Removed custom `/health` endpoint in favor of Actuator.
+
+### Fly.io Configuration
+
+- `min_machines_running = 1` (stability during rollout)
+- Memory reduced from 1GB → **512MB**
+- VM config:
+- `memory = "512mb"`
+- `memory_mb = 512`
+
+512MB chosen as stable production baseline for:
+- Native Spring Boot 4
+- Thymeleaf
+- Actuator
+- Cold-start warmup
+
+Can consider lowering later if memory metrics remain low.
+
+### Outcome
+
+- Faster cold starts
+- Lower runtime memory vs JVM
+- Cleaner health checks
+- Stable Fly deployment
+- Native binary production build

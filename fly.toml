@@ -18,11 +18,11 @@ primary_region = 'lax'
 
 # Health check tuned for native startup
 [[http_service.checks]]
-  grace_period = "10s"
+  grace_period = "30s"
   interval = "10s"
   timeout = "2s"
   method = "GET"
-  path = "/actuator/health"
+  path = "/actuator/health/readiness"
   protocol = "http"
 
 [[vm]]
