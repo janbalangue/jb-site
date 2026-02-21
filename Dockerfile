@@ -6,8 +6,7 @@ COPY .mvn .mvn
 COPY mvnw mvnw
 RUN ./mvnw -q -DskipTests dependency:go-offline
 COPY src ./src
-RUN ./mvnw -q -Pnative -DskipTests native:compile
-
+RUN ./mvnw -q -Pnative -DskipTests package
 
 # ---- Run stage (native) ----
 FROM debian:bookworm-slim
