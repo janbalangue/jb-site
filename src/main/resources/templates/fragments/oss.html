@@ -1,6 +1,11 @@
 <div class="panelInner">
     <h3>Open Source</h3>
-    <p class="muted">Async Bulkhead libraries published to Maven Central (v0.5.2) and npm (v0.2.1).</p>
+    <p class="muted">
+        Async Bulkhead libraries published to Maven Central
+        (<span th:text="${stats.bulkheadVersion}"></span>)
+        and npm
+        (<span th:text="${stats.tsBulkheadVersion}"></span>).
+    </p>
 
 
     <div class="miniGrid">

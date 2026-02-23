@@ -1,12 +1,17 @@
 <div class="panelInner">
     <h3>Writing</h3>
-    <p class="muted">300 Substack subscribers and 1.3K followers since starting in Oct 2025.</p>
-
+    <p class="muted">
+        <span th:text="${stats.substackSubscribers}"></span>
+        Substack subscribers and
+        <span th:text="${stats.substackFollowers}"></span>
+        followers since starting in
+        <span th:text="${stats.substackSince}"></span>.
+    </p>
 
     <div class="miniGrid">
         <div class="miniCard">
-            <h4>Substack</h4>
-            <p class="muted">Piano, software perspectives, ideas, and personal reflections.</p>
+            <h4>The Wandering Piano</h4>
+            <p class="muted">Music, tech, musings, memories.</p>
             <a class="link" href="https://jaybalangue.substack.com/" rel="noopener">Read →</a>
         </div>
     </div>

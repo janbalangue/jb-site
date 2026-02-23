@@ -314,3 +314,40 @@ Can consider lowering later if memory metrics remain low.
 - Cleaner health checks
 - Stable Fly deployment
 - Native binary production build
+
+---
+
+## 2026-02-23 – Centralized Site Stats (Single Source of Truth)
+
+### Summary
+Refactored site-wide statistics (subscribers, followers, versions) to be defined in one place and automatically injected into all Thymeleaf templates — including HTMX fragment renders.
+
+### Changes
+
+#### 1. Introduced `SiteStats` configuration bean
+- Added `@ConfigurationProperties(prefix = "site.stats")`
+- Moved all subscriber counts and library versions into `application.properties`
+- Added safe default values at the configuration layer to eliminate null checks in templates
+
+#### 2. Added global model injection
+- Created `@ControllerAdvice` (`GlobalModelAttributes`)
+- Injected `stats` into every Thymeleaf render (full pages + fragments)
+- Removed per-controller stat wiring
+
+#### 3. Removed hardcoded values from templates
+Updated:
+- `index.html`
+- `fragments/writing.html`
+- `fragments/oss.html`
+
+Replaced hardcoded:
+- Substack subscriber counts
+- Follower counts
+- "Since" dates
+- Maven/npm version numbers
+
+All values now use:
+
+```html
+<span th:text="${stats.*}"></span>
+```
