@@ -12,7 +12,7 @@
             <div>
                 <h1>Hi, I’m Jay — a writer, software developer, and music & video creator.</h1>
                 <p class="lead">
-                    Popular <strong>SoundCloud pianist</strong> and <strong>YouTuber</strong>, <strong>Substack</strong> writer, and <strong>software engineer</strong> building reliable systems and open-source libraries.
+                    Popular <strong>SoundCloud pianist</strong> and <strong>YouTuber</strong>, <strong>Substack</strong> writer, and <strong>software engineer</strong> building cross-platform applications and open-source libraries.
                 </p>
 
                 <div class="ctaRow">
@@ -26,7 +26,7 @@
                         <div class="pillValue">
                             <span th:text="${stats.soundcloudFollowers}"></span> followers
                         </div>
-                        <div class="pillMeta"><span>18 tracks</span></div>
+                        <div class="pillMeta"><span>27 tracks</span></div>
                     </div>
 
                     <div class="pill">
@@ -47,7 +47,34 @@
                         </div>
                         <div class="pillMeta">Since <span th:text="${stats.youtubeSince}"></span></div>
                     </div>
-
+                    <div class="pill">
+                        <div class="pillKicker">Web Application</div>
+                        <div class="pillValue">LoadLens</div>
+                        <div class="pillMeta">
+                            April 2026 • v0.2.0
+                        </div>
+                    </div>
+                    <div class="pill">
+                        <div class="pillKicker">Web Application</div>
+                        <div class="pillValue">WriteReps</div>
+                        <div class="pillMeta">
+                            Since Mar 2026 • <span th:text="${stats.writeRepsVersion}"></span>
+                        </div>
+                    </div>
+                    <div class="pill">
+                        <div class="pillKicker">Open Source</div>
+                        <div class="pillValue">Async Bulkhead LLM</div>
+                        <div class="pillMeta">
+                            npm • <span th:text="${stats.bulkheadLlmVersion}"></span>
+                        </div>
+                    </div>
+                    <div class="pill">
+                        <div class="pillKicker">Open Source</div>
+                        <div class="pillValue">Async Bulkhead Express</div>
+                        <div class="pillMeta">
+                            npm • <span th:text="${stats.expressBulkheadVersion}"></span>
+                        </div>
+                    </div>
                     <div class="pill">
                         <div class="pillKicker">Open Source</div>
                         <div class="pillValue">Async Bulkhead</div>
@@ -69,12 +96,16 @@
                 <h2>Quick links</h2>
                 <ul class="linkList">
                     <li><a href="https://linkedin.com/in/jan-balangue" rel="noopener">LinkedIn</a><span class="muted"> Profile</span></li>
-                    <li><a href="https://www.hackerrank.com/profile/jan_a_balangue" rel="noopener">HackerRank</a><span class="muted"> Profile</span></li>
-                    <li><a href="https://soundcloud.com/jaybalangue" rel="noopener">SoundCloud</a><span class="muted"> Piano performances</span></li>
-                    <li><a href="https://www.youtube.com/@jaybalangue" rel="noopener">YouTube</a><span class="muted"> Music channel</span></li>
-                    <li><a href="https://jaybalangue.substack.com/" rel="noopener">Substack</a><span class="muted"> Blog</span></li>
                     <li><a href="https://github.com/janbalangue" rel="noopener">GitHub</a><span class="muted"> Code</span></li>
+                    <li><a href="https://soundcloud.com/jaybalangue" rel="noopener">SoundCloud</a><span class="muted"> Piano music</span></li>
+                    <li><a href="https://jaybalangue.substack.com/" rel="noopener">Substack</a><span class="muted"> Blog</span></li>
+                    <li><a href="https://loadlens.dev">LoadLens</a> <span class="muted"> Web app</span></li>
+                    <li><a href="https://writereps.com" rel="noopener">WriteReps</a> <span class="muted"> Web app</span></li>
+                    <li><a href="https://wdmueller.com" rel="noopener">wdmueller.com</a> <span class="muted"> Website</span></li>
+                    <li><a href="https://www.youtube.com/@jaybalangue" rel="noopener">YouTube</a><span class="muted"> Music channel</span></li>
+                    <li><a href="https://www.hackerrank.com/profile/jan_a_balangue" rel="noopener">HackerRank</a><span class="muted"> Profile</span></li>
                     <li><a href="https://central.sonatype.com/artifact/io.github.janbalangue/async-bulkhead-parent" rel="noopener">Maven Central</a><span class="muted"> async-bulkhead library</span></li>
+                    <li><a href="https://www.npmjs.com/package/async-bulkhead-llm" rel="noopener">npm</a><span class="muted"> async-bulkhead-llm library</span></li>
                     <li><a href="https://www.npmjs.com/package/async-bulkhead-ts" rel="noopener">npm</a><span class="muted"> async-bulkhead-ts library</span></li>
                 </ul>
             </aside>
@@ -90,13 +121,13 @@
                 <ul class="bullets">
                     <li>SoundCloud releases</li>
                     <li>YouTube music videos</li>
-                    <li>Patreon perks (video exclusives, pristine music downloads)</li>
+                    <li>Single available on Apple Music</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>Writing</h3>
-                <p class="muted">On Substack: piano, software perspectives, ideas, and personal reflections.</p>
+                <p class="muted">On Substack: piano music, coding adventures, poetry, and occasional perspicacity.</p>
                 <ul class="bullets">
                     <li>
                         <span th:text="${stats.substackSubscribers}"></span>
@@ -111,11 +142,13 @@
 
             <div class="card">
                 <h3>Software</h3>
-                <p class="muted">Thoughtful, cost-conscious engineering for resilient asynchronous systems.</p>
+                <p class="muted">Thoughtful, customer-focused engineering.</p>
                 <ul class="bullets">
+                    <li>WriteReps web app in early access</li>
+                    <li>wdmueller.com website for published novelist</li>
+                    <li>async-bulkhead-llm library on npm</li>
                     <li>async-bulkhead-parent library on Maven Central</li>
                     <li>async-bulkhead-ts library on npm</li>
-                    <li>Docs and semantics-first approach</li>
                 </ul>
             </div>
         </div>
@@ -135,9 +168,9 @@
                 Writing
             </button>
 
-            <button class="tab" hx-get="/fragments/oss"
+            <button class="tab" hx-get="/fragments/software"
                     hx-push-url="false" hx-swap="innerHTML" hx-target="#tabPanel" role="tab">
-                Open Source
+                Software
             </button>
         </div>
         <div class="panel" id="tabPanel" role="tabpanel"></div>

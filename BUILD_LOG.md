@@ -351,3 +351,30 @@ All values now use:
 ```html
 <span th:text="${stats.*}"></span>
 ```
+
+---
+
+## 2026-04-01
+
+### Software Section Rename & Routing Fix
+
+- Renamed the Explore fragment from `oss.html` to `software.html` to better match the broader scope of the section. :contentReference[oaicite:0]{index=0}
+- Updated the HTMX tab route from `/fragments/oss` to `/fragments/software` and aligned the controller mapping to return `fragments/software`. :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2}
+- Resolved the Thymeleaf template lookup issue caused by the fragment rename mismatch. :contentReference[oaicite:3]{index=3}
+
+### Content Expansion
+
+- Expanded the Software section to highlight WriteReps, wdmueller.com, async-bulkhead-llm, async-bulkhead-ts, and async-bulkhead. :contentReference[oaicite:4]{index=4}
+- Refreshed the homepage Software card to reflect broader product and engineering work beyond open source alone. :contentReference[oaicite:5]{index=5}
+- Updated Music and Writing fragments with refreshed copy, current links, and improved positioning of current work. :contentReference[oaicite:6]{index=6} :contentReference[oaicite:7]{index=7}
+
+### Site Stats & Warmup
+
+- Updated site-wide stats and version metadata in `application.properties`, including SoundCloud, Substack, YouTube, WriteReps, and async-bulkhead-llm values. :contentReference[oaicite:8]{index=8}
+- Extended `SiteStats` to include `writeRepsVersion` and `bulkheadLlmVersion` so new product and library metadata can be rendered consistently across templates. :contentReference[oaicite:9]{index=9}
+- Updated cold-start warmup to preload `fragments/software` so the renamed fragment participates in template cache priming. :contentReference[oaicite:10]{index=10}
+
+### Notes
+
+- This update combines a naming cleanup, a routing fix, and a broader content refresh.
+- The Software section now reflects both product work and open-source work more accurately.

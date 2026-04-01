@@ -22,6 +22,9 @@ public class SiteStats {
 
     private String bulkheadVersion = "";
     private String tsBulkheadVersion = "";
+    private String writeRepsVersion = "";
+    private String bulkheadLlmVersion = "";
+    private String expressBulkheadVersion = "";
 
     public String getSoundcloudFollowers() {
         return soundcloudFollowers;
@@ -85,5 +88,29 @@ public class SiteStats {
 
     public void setTsBulkheadVersion(String tsBulkheadVersion) {
         this.tsBulkheadVersion = tsBulkheadVersion;
+    }
+
+    public String getWriteRepsVersion() {
+        return writeRepsVersion;
+    }
+
+    public void setWriteRepsVersion(String writeRepsVersion) {
+        this.writeRepsVersion = writeRepsVersion;
+    }
+
+    public String getBulkheadLlmVersion() {
+        return bulkheadLlmVersion;
+    }
+
+    public void setBulkheadLlmVersion(String bulkheadLlmVersion) {
+        this.bulkheadLlmVersion = bulkheadLlmVersion;
+    }
+
+    public String getExpressBulkheadVersion() {
+        return expressBulkheadVersion;
+    }
+
+    public void setExpressBulkheadVersion(String expressBulkheadVersion) {
+        this.expressBulkheadVersion = expressBulkheadVersion;
     }
 }

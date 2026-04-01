@@ -22,8 +22,8 @@ public class PageController {
         return "fragments/writing";
     }
 
-    @GetMapping("/fragments/oss")
-    public String oss() {
-        return "fragments/oss";
+    @GetMapping("/fragments/software")
+    public String software() {
+        return "fragments/software";
     }
 }

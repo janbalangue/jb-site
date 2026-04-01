@@ -41,11 +41,16 @@ jb-site/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── io/janbalangue/jbsite/
-│   │   │       └── PageController.java
-│   │   │       └── ColdStartWarmup.java
+│   │   │   └── io/janbalangue/jbsite
+                └── config
+                    └── SiteStats.java
+                └── web
+                    └── GlobalModelAttributes.java
+│   │   │           └── PageController.java
+│   │   │           └── ColdStartWarmup.java
 │   │   └── resources/
-│   │       ├── static/
+            ├── application.properties
+│   │       ├── static
 │   │       │   ├── styles.css
 │   │       │   ├── jay.js
 │   │       │   └── images/
@@ -53,11 +58,10 @@ jb-site/
 │   │       └── templates/
 │   │           ├── layout.html
 │   │           ├── index.html
-│   │           ├── music.html
 │   │           └── fragments/
 │   │               ├── music.html
 │   │               ├── writing.html
-│   │               └── oss.html
+│   │               └── software.html
 │   └── test/
 ├── pom.xml
 └── README.md

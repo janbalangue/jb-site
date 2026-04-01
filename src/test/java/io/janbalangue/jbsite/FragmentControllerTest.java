@@ -35,9 +35,9 @@ class FragmentControllerTest {
 
     @Test
     void ossFragmentLoads() throws Exception {
-        mockMvc.perform(get("/fragments/oss"))
+        mockMvc.perform(get("/fragments/software"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("fragments/oss"));
+                .andExpect(view().name("fragments/software"));
     }
 }
 

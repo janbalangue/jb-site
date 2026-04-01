@@ -17,14 +17,6 @@ public class ColdStartWarmup {
     private static final Logger log = LoggerFactory.getLogger(ColdStartWarmup.class);
 
     private static final Map<String, Object> STATS = Map.of(
-            "soundcloudFollowers", "1.3K",
-            "substackSubscribers", 320,
-            "substackFollowers", "1.5K",
-            "substackSince", "Oct 2025",
-            "youtubeSubscribers", "4.8K",
-            "youtubeSince", "Dec 2025",
-            "bulkheadVersion", "v0.5.2",
-            "tsBulkheadVersion", "v0.2.2"
     );
 
     private final SpringTemplateEngine templateEngine;
@@ -42,7 +34,7 @@ public class ColdStartWarmup {
             render("index");
             render("fragments/music");
             render("fragments/writing");
-            render("fragments/oss");
+            render("fragments/software");
             log.info("Cold start warmup complete");
         } catch (Exception e) {
             // Never fail startup for warmup.
