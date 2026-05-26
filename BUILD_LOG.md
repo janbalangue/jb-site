@@ -378,3 +378,23 @@ All values now use:
 
 - This update combines a naming cleanup, a routing fix, and a broader content refresh.
 - The Software section now reflects both product work and open-source work more accurately.
+
+---
+
+## 2026-05-26
+
+### Music Embed Refresh
+
+* Updated the Music tab with new embedded media, replacing the previous SoundCloud track reference from the GitHub version of `fragments/music.html`.
+* Kept the existing Music section structure focused on SoundCloud, YouTube, and original music while refreshing the playable embeds.
+* Added the latest SoundCloud embed and YouTube video embed so visitors can play current music directly from the tab.
+
+### Software Project Updates
+
+* Updated the Software tab to include newer code projects beyond the previously published project set in the GitHub version of `fragments/software.html`.
+* Added / surfaced additional project cards including Systems Under Load, GroundhogTrace, LoadLens, async-bulkhead-express, and the existing async-bulkhead family.
+* Preserved the broader Software positioning around personal projects, products, libraries, and systems work rather than reverting to the older Open Source framing.
+
+### Notes
+
+* Changes are content and embed focused; no routing, controller, layout, or deployment changes are recorded in this entry.
