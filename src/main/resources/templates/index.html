@@ -4,206 +4,125 @@
 
 <th:block th:fragment="content">
 
-    <section class="hero">
-        <div class="heroImage">
-            <img alt="jb-site header image" src="/images/header-piano.png"/>
-        </div>
+    <section class="container hero">
+        <p class="label">A personal notebook · Chula Vista, CA</p>
+        <h1>Jay Balangue</h1>
+
         <div class="heroGrid">
             <div>
-                <h1>Hi, I’m Jay — a software developer, writer, and music & video creator.</h1>
-                <p class="lead">
-                    Popular <strong>SoundCloud pianist</strong> and <strong>YouTuber</strong>, <strong>Substack</strong> writer, and <strong>software engineer</strong> building cross-platform applications and open-source libraries.
+                <p class="heroLead">Hi, I'm Jay — a software engineer, technical writer, and musician.</p>
+                <p class="muted">
+                    I build cross-platform applications and open-source libraries, publish technical articles on DEV and Coder Legion, and share piano music on SoundCloud and YouTube.
                 </p>
-
-                <div class="ctaRow">
-                    <a class="btn" href="#explore">Explore</a>
-                    <a class="btn ghost" href="#contact">Get in touch</a>
-                </div>
-
-                <div class="pillRow" id="highlights">
-                    <div class="pill">
-                        <div class="pillKicker">SoundCloud</div>
-                        <div class="pillValue">
-                            <span th:text="${stats.soundcloudFollowers}"></span> followers
-                        </div>
-                        <div class="pillMeta"><span>27 tracks</span></div>
-                    </div>
-
-                    <div class="pill">
-                        <div class="pillKicker">Substack</div>
-                        <div class="pillValue">
-                            <span th:text="${stats.substackSubscribers}"></span> subscribers
-                            <br />
-                            <span th:text="${stats.substackFollowers}"></span> followers
-
-                        </div>
-                        <div class="pillMeta">Since <span th:text="${stats.substackSince}"></span></div>
-                    </div>
-
-                    <div class="pill">
-                        <div class="pillKicker">YouTube Music</div>
-                        <div class="pillValue">
-                            <span th:text="${stats.youtubeSubscribers}"></span> subscribers
-                        </div>
-                        <div class="pillMeta">Since <span th:text="${stats.youtubeSince}"></span></div>
-                    </div>
-                    <div class="pill">
-                        <div class="pillKicker">Web Application</div>
-                        <div class="pillValue">LoadLens</div>
-                        <div class="pillMeta">
-                            April 2026 • v0.2.0
-                        </div>
-                    </div>
-                    <div class="pill">
-                        <div class="pillKicker">Web Application</div>
-                        <div class="pillValue">WriteReps</div>
-                        <div class="pillMeta">
-                            Since Mar 2026 • <span th:text="${stats.writeRepsVersion}"></span>
-                        </div>
-                    </div>
-                    <div class="pill">
-                        <div class="pillKicker">Open Source</div>
-                        <div class="pillValue">Async Bulkhead LLM</div>
-                        <div class="pillMeta">
-                            npm • <span th:text="${stats.bulkheadLlmVersion}"></span>
-                        </div>
-                    </div>
-                    <div class="pill">
-                        <div class="pillKicker">Open Source</div>
-                        <div class="pillValue">Async Bulkhead Express</div>
-                        <div class="pillMeta">
-                            npm • <span th:text="${stats.expressBulkheadVersion}"></span>
-                        </div>
-                    </div>
-                    <div class="pill">
-                        <div class="pillKicker">Open Source</div>
-                        <div class="pillValue">Async Bulkhead</div>
-                        <div class="pillMeta">
-                            Maven Central • <span th:text="${stats.bulkheadVersion}"></span>
-                        </div>
-                    </div>
-                    <div class="pill">
-                        <div class="pillKicker">Open Source</div>
-                        <div class="pillValue">Async Bulkhead TS</div>
-                        <div class="pillMeta">
-                            npm • <span th:text="${stats.tsBulkheadVersion}"></span>
-                        </div>
-                    </div>
-                </div>
+                <a class="link" href="#work">Explore the work below</a>
             </div>
 
-            <aside class="card">
-                <h2>Quick links</h2>
-                <ul class="linkList">
-                    <li><a href="https://linkedin.com/in/jan-balangue" rel="noopener">LinkedIn</a><span class="muted"> Profile</span></li>
-                    <li><a href="https://github.com/janbalangue" rel="noopener">GitHub</a><span class="muted"> Code</span></li>
-                    <li><a href="https://writereps.com" rel="noopener">WriteReps</a> <span class="muted"> Web app</span></li>
-                    <li><a href="https://soundcloud.com/jaybalangue" rel="noopener">SoundCloud</a><span class="muted"> Piano music</span></li>
-                    <li><a href="https://jaybalangue.substack.com/" rel="noopener">Substack</a><span class="muted"> Blog</span></li>
-                    <li><a href="https://loadlens.dev">LoadLens</a> <span class="muted"> Web app</span></li>
-                    <li><a href="https://wdmueller.com" rel="noopener">wdmueller.com</a> <span class="muted"> Website</span></li>
-                    <li><a href="https://www.youtube.com/@jaybalangue" rel="noopener">YouTube</a><span class="muted"> Music channel</span></li>
-                    <li><a href="https://central.sonatype.com/artifact/io.github.janbalangue/async-bulkhead-parent" rel="noopener">Maven Central</a><span class="muted"> async-bulkhead library</span></li>
-                    <li><a href="https://www.npmjs.com/package/async-bulkhead-llm" rel="noopener">npm</a><span class="muted"> async-bulkhead-llm library</span></li>
-                    <li><a href="https://www.npmjs.com/package/async-bulkhead-ts" rel="noopener">npm</a><span class="muted"> async-bulkhead-ts library</span></li>
-                </ul>
-            </aside>
+            <figure class="heroFigure">
+                <img alt="Piano keys with the JB monogram" height="285" src="/images/header-piano.png" width="1280"/>
+                <figcaption>
+                    <span>At the keys, and between disciplines.</span>
+                    <em>Music. Words. Code.</em>
+                </figcaption>
+            </figure>
         </div>
     </section>
 
-    <section class="section" id="work">
-        <h2>What I do</h2>
-        <div class="cards">
-            <div class="card">
+    <section class="container" id="work">
+        <div class="overview">
+            <div>
+                <h2 class="label">What I do</h2>
+                <p class="aside">Three ways of making things.</p>
+            </div>
+
+            <div>
                 <h3>Music</h3>
                 <p class="muted">Piano covers shaped by eclectic taste and reinvention.</p>
-                <ul class="bullets">
-                    <li>SoundCloud releases</li>
-                    <li>YouTube music videos</li>
-                    <li>Singles on Spotify and Apple Music</li>
-                </ul>
+                <p class="tags">SoundCloud / YouTube / Original music</p>
             </div>
 
-            <div class="card">
+            <div>
                 <h3>Writing</h3>
-                <p class="muted">On Substack: piano music, coding adventures, poetry, and occasional perspicacity.</p>
-                <ul class="bullets">
-                    <li>
-                        <span th:text="${stats.substackSubscribers}"></span>
-                        subscribers since
-                        <span th:text="${stats.substackSince}"></span>
-                    </li>
-                    <li>
-                        <span th:text="${stats.substackFollowers}"></span> followers
-                    </li>
-                </ul>
+                <p class="muted">Technical articles.</p>
+                <p class="tags">DEV / Coder Legion</p>
             </div>
 
-            <div class="card">
+            <div>
                 <h3>Software</h3>
                 <p class="muted">Thoughtful, customer-focused engineering.</p>
-                <ul class="bullets">
-                    <li>WriteReps web app in early access</li>
-                    <li>wdmueller.com website for published novelist</li>
-                    <li>async-bulkhead-llm library on npm</li>
-                    <li>async-bulkhead-parent library on Maven Central</li>
-                    <li>async-bulkhead-ts library on npm</li>
+                <p class="tags">Web applications / Open-source libraries</p>
+            </div>
+        </div>
+    </section>
+
+    <th:block th:replace="~{fragments/music}"/>
+    <th:block th:replace="~{fragments/writing}"/>
+    <th:block th:replace="~{fragments/software}"/>
+
+    <section class="section" id="elsewhere">
+        <div class="container">
+            <header class="sectionHead">
+                <span class="sectionNum">04</span>
+                <h2>Elsewhere</h2>
+                <span class="label">A few useful doors</span>
+            </header>
+
+            <div class="split">
+                <p class="aside asideLarge">The work continues in a few other places.</p>
+
+                <ul class="doors">
+                    <li>
+                        <a class="link" href="https://linkedin.com/in/jan-balangue" rel="noopener">LinkedIn Profile</a>
+                        <span>Professional profile</span>
+                    </li>
+                    <li>
+                        <a class="link" href="https://github.com/janbalangue" rel="noopener">GitHub Code</a>
+                        <span>Projects &amp; repositories</span>
+                    </li>
+                    <li>
+                        <a class="link" href="https://soundcloud.com/jaybalangue" rel="noopener">SoundCloud Piano music</a>
+                        <span>Covers &amp; releases</span>
+                    </li>
+                    <li>
+                        <a class="link" href="https://www.youtube.com/@jaybalangue" rel="noopener">YouTube Music channel</a>
+                        <span>Piano music videos</span>
+                    </li>
+                    <li>
+                        <a class="link" href="https://dev.to/janbalangue" rel="noopener">DEV articles</a>
+                        <span>Technical articles</span>
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section class="section" id="explore">
-        <h2>Explore</h2>
-        <p class="muted">Links to my personal projects.</p>
-        <div aria-label="Explore tabs" class="tabRow" role="tablist">
-            <button class="tab" hx-get="/fragments/music"
-                    hx-push-url="false" hx-swap="innerHTML" hx-target="#tabPanel" role="tab">
-                Music
-            </button>
+    <section id="contact">
+        <div class="container">
+            <div class="contact">
+                <div>
+                    <p class="label">Get in touch</p>
+                    <h2>Say hello.</h2>
+                    <p class="muted">
+                        For collaborations, consulting, or just saying hello — feel free to reach out.
+                    </p>
+                </div>
 
-            <button class="tab" hx-get="/fragments/writing"
-                    hx-push-url="false" hx-swap="innerHTML" hx-target="#tabPanel" role="tab">
-                Writing
-            </button>
+                <div class="contactDetails">
+                    <a class="link contactEmail" href="mailto:jan.a.balangue@gmail.com">jan.a.balangue@gmail.com</a>
 
-            <button class="tab" hx-get="/fragments/software"
-                    hx-push-url="false" hx-swap="innerHTML" hx-target="#tabPanel" role="tab">
-                Software
-            </button>
-        </div>
-        <div class="panel" id="tabPanel" role="tabpanel"></div>
-
-    </section>
-
-    <section class="section" id="contact">
-        <h2>Get in touch</h2>
-        <p class="muted">
-            For collaborations, consulting, or just saying hello — feel free to reach out.
-        </p>
-
-        <div class="contactCard">
-            <div class="contactItem">
-                <span class="contactLabel">Location</span>
-                <span class="contactValue muted">Chula Vista, CA</span>
-            </div>
-
-            <div class="contactItem">
-                <span class="contactLabel">Email</span>
-                <a class="contactValue" href="mailto:jan.a.balangue@gmail.com">
-                    jan.a.balangue@gmail.com
-                </a>
-            </div>
-
-            <div class="contactItem">
-                <span class="contactLabel">Phone</span>
-                <a class="contactValue" href="tel:+18587755831">
-                    (858) 775-5831
-                </a>
+                    <dl class="contactList">
+                        <div>
+                            <dt class="label">Location</dt>
+                            <dd>Chula Vista, CA</dd>
+                        </div>
+                        <div>
+                            <dt class="label">Phone</dt>
+                            <dd><a href="tel:+18587755831">(858) 775-5831</a></dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
         </div>
     </section>
-
 
 </th:block>
 </html>

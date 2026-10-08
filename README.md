@@ -1,8 +1,8 @@
 # jb-site
 
-Personal website built with Spring Boot + Thymeleaf, designed as a clean, fast, dark-mode–first home for my work in software, writing, and music.
+Personal website built with Spring Boot + Thymeleaf, designed as a clean, fast, editorial-style home for my work in software, writing, and music.
 
-This site powers my landing page, project highlights, and contact info, with lightweight interactivity via HTMX and zero frontend frameworks.
+This site powers my landing page, project highlights, and contact info, server-rendered with zero frontend frameworks.
 
 ## 🌐 Live Site
 
@@ -18,12 +18,12 @@ Deployed on Fly.io using Docker. Server-rendered with Spring Boot 4.x + Thymelea
 
 * Spring Boot 4 + Thymeleaf server-rendered pages
 * GraalVM native image build for fast cold starts
-* Dark-mode–first UI with custom CSS (no frameworks)
-* HTMX-powered tabs for dynamic content loading
+* Light, editorial UI with custom CSS (no frameworks)
+* Single-page layout: Music, Writing, Software, Elsewhere, and Contact sections
 * Responsive hero layout with image header
-* Scroll-to-top button with smooth scrolling
+* Back-to-top link with smooth scrolling
 * Modular fragment-based layout for easy iteration
-* YouTube embed + SoundCloud player
+* YouTube video embeds for recent piano releases
 * Actuator health checks for production readiness
 
 ## 🧱 Tech Stack
@@ -31,7 +31,7 @@ Deployed on Fly.io using Docker. Server-rendered with Spring Boot 4.x + Thymelea
 * **Backend**: Spring Boot 4, Java
 * **Templating**: Thymeleaf
 * **Frontend**: Vanilla HTML, CSS, JavaScript
-* **Interactivity**: HTMX
+* **Fonts**: Libre Baskerville, Inter, IBM Plex Mono (Google Fonts)
 * **Build**: Maven
 
 ## 📁 Project Structure
@@ -105,18 +105,15 @@ Liveness and readiness probes are enabled for Fly.io deployment health checks.
 
 ## 🧩 Notable UI Patterns 
 
-### HTMX Tabs
+### Section Fragments
 
-The Explore section uses HTMX to load content fragments without full page reloads:
+The Music, Writing, and Software sections each live in their own fragment and are composed into the home page:
 
 ```html
-<button class="tab"
-hx-get="/fragments/music"
-hx-target="#tabPanel"
-hx-swap="innerHTML">
-Music
-</button>
+<th:block th:replace="~{fragments/music}"/>
 ```
+
+Each one is also served standalone at `/fragments/music`, `/fragments/writing`, and `/fragments/software`.
 
 ### Layout Composition
 
@@ -130,16 +127,17 @@ This keeps global styles, scripts, and navigation consistent.
 
 ## 🎵 Content Areas
 
-* **Music**: SoundCloud, YouTube, Patreon embeds and links
-* **Writing**: Substack blogs and cross-posts
-* **Open Source**: Async Bulkhead library (published to Maven Central)
+* **Music**: YouTube video embeds plus SoundCloud, YouTube, Spotify, and Apple Music links
+* **Writing**: Substack blog and published novels
+* **Software**: Web applications and the Async Bulkhead open-source libraries
+* **Elsewhere**: Profile and channel links
 * **Contact**: Location, email, and phone
 
 🎯 Design Goals
 
 * Minimal dependencies
 * Fast page loads
-* Readable, calm, dark UI
+* Readable, calm, editorial UI
 * Server-side rendering first
 * Progressive enhancement instead of heavy JS
 

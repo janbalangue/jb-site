@@ -7,22 +7,41 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title th:text="${title} ?: 'Jay — Music & Software'">Jay — Music & Software</title>
 
-    <link href="/styles.css?v=6" rel="stylesheet"/>
-    <script defer src="/jay.js"></script>
-    <script defer src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&amp;family=Inter&amp;family=Libre+Baskerville:ital@0;1&amp;display=swap"
+          rel="stylesheet"/>
+    <link href="/styles.css?v=7" rel="stylesheet"/>
+    <script defer src="/jay.js?v=2"></script>
 </head>
 
 <body>
-<header class="header">
+<header class="container" id="top">
+    <nav aria-label="Primary" class="nav">
+        <a class="brand" href="/">
+            <span class="brandMark">JB</span>
+            <span class="brandName">Jay Balangue</span>
+        </a>
+        <ul class="navLinks">
+            <li><a href="#music">Music</a></li>
+            <li><a href="#writing">Writing</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="#elsewhere">Elsewhere</a></li>
+            <li><a class="link" href="#contact">Get in touch</a></li>
+        </ul>
+    </nav>
 </header>
 
-<main class="container" id="top">
+<main>
     <th:block th:replace="${content}"/>
 </main>
 
-<footer class="container footer"></footer>
-<button aria-label="Scroll to top" class="scrollTopBtn" id="scrollTopBtn">
-    ↑
-</button>
+<footer class="container">
+    <div class="footer">
+        <span class="footerName">Jay Balangue</span>
+        <span class="footerTags">Music · Writing · Software</span>
+        <a class="footerTop" href="#top" id="scrollTopBtn">Back to top ↑</a>
+    </div>
+</footer>
 </body>
 </html>
