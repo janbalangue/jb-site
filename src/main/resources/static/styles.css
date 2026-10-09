@@ -124,11 +124,6 @@ a:focus-visible {
     color: var(--muted);
 }
 
-.metaLarge {
-    font-size: 12px;
-    line-height: 23px;
-}
-
 .aside {
     font-family: var(--serif);
     font-style: italic;
@@ -407,30 +402,31 @@ h1 {
    Writing
    ========================= */
 
-.rail .label + .meta {
-    margin-top: 19px;
-}
-
-.rail .meta + .link {
-    margin-top: 16px;
-}
-
-.pullQuote {
-    font-family: var(--serif);
-    font-size: clamp(25px, 2.64vw, 38px);
-    line-height: 1.42;
-}
-
-.pullRow {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 4px 24px;
-    margin-top: 26px;
-    padding-top: 19px;
+/* One block per publication: its name in the rail, its articles alongside */
+.publications {
     border-top: 1px solid var(--rule);
-    line-height: 22px;
+}
+
+.publication {
+    align-items: baseline;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.publication:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.articles {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.articles li + li {
+    margin-top: 13px;
+    padding-top: 13px;
+    border-top: 1px solid var(--rule);
 }
 
 /* =========================
@@ -654,6 +650,10 @@ h1 {
 
     .statement {
         max-width: none;
+    }
+
+    .publication {
+        row-gap: 12px;
     }
 
     .overview {
